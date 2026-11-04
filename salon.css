@@ -1,0 +1,1040 @@
+
+/* =====================================
+   SOHNA SALON - PREMIUM THEME
+   WHITE + RED + GOLD
+===================================== */
+
+
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #292929;
+    line-height: 1.7;
+}
+
+:root {
+    --red: #b51224;
+    --dark-red: #850d1b;
+    --gold: #c6a15b;
+    --light-gold: #f8f1e5;
+    --white: #ffffff;
+    --light: #f8f8f8;
+    --dark: #242424;
+    --gray: #777777;
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header {
+    width: 100%;
+    background-color: var(--white);
+    text-align: center;
+    padding: 15px 6%;
+    border-top: 5px solid var(--red);
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+
+    .logo img {
+    width: min(100%, 650px);
+    height: 260px;
+    object-fit: contain;
+}
+
+
+.header > p {
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin: 5px 0 18px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 0;
+    position: relative;
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--gold);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--red);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+    min-height: 480px;
+    padding: 100px 20px;
+    /* background:
+        linear-gradient(
+            rgba(25, 15, 15, 0.76),
+            rgba(25, 15, 15, 0.76)
+        ),
+        linear-gradient(135deg, #4b1018, #171717); */
+        background:
+    linear-gradient(
+        rgba(25, 25, 25, 0.82),
+        rgba(25, 25, 25, 0.82)
+    ),
+    linear-gradient(
+        135deg,
+        #252525,
+        #252525,
+        #080808fb
+    );
+    color: var(--white);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h2 {
+    font-size: clamp(32px, 5vw, 55px);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    font-family: sans-serif;
+}
+
+.hero p {
+    font-size: 17px;
+    color: #eeeeee;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 32px;
+    background-color: var(--red);
+    color: var(--white);
+    text-decoration: none;
+    border: 2px solid var(--red);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--dark);
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   SERVICES
+===================================== */
+
+.services {
+    padding: 75px 7%;
+    background-color: var(--light);
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.services > h2,
+.services > p {
+    grid-column: 1 / -1;
+}
+
+.services > h2 {
+    font-size: 35px;
+    color: var(--red);
+    margin-bottom: -15px;
+}
+
+.services > p {
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.service-box {
+    background-color: var(--white);
+    padding: 25px 18px;
+    border-radius: 8px;
+    border-bottom: 3px solid var(--gold);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-6px);
+    border-bottom-color: var(--red);
+    box-shadow: 0 10px 25px rgba(181, 18, 36, 0.10);
+}
+
+.service-box h3 {
+    color: var(--dark);
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.service-box p {
+    color: var(--red);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+/* =====================================
+   ABOUT
+===================================== */
+
+.about {
+    padding: 80px 10%;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.about h2 {
+    font-size: 34px;
+    color: var(--red);
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    color: var(--gray);
+    font-size: 16px;
+}
+
+
+/* =====================================
+   BOOKING SECTION
+===================================== */
+
+.booking-section {
+    padding: 75px 20px;
+    background-color: #faf7f4;
+}
+
+.booking-container {
+    max-width: 900px;
+    margin: auto;
+    background-color: var(--white);
+    padding: 45px;
+    border-radius: 12px;
+    border-top: 5px solid var(--red);
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.08);
+}
+
+.booking-subtitle {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.booking-container > h2 {
+    color: var(--red);
+    font-size: 34px;
+    text-align: center;
+    margin: 8px 0;
+}
+
+.booking-description {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 35px;
+}
+
+#bookingForm h3 {
+    color: var(--dark);
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+#bookingForm > p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+#bookingForm label:not(.barber-card):not(.service-selection label) {
+    display: block;
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 15px 0 7px;
+}
+
+
+/* INPUTS AND SELECT */
+
+#bookingForm input[type="text"],
+#bookingForm input[type="tel"],
+#bookingForm input[type="date"],
+#bookingForm select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#bookingForm input:focus,
+#bookingForm select:focus {
+    border-color: var(--red);
+    box-shadow: 0 0 0 3px rgba(181, 18, 36, 0.08);
+}
+
+
+/* =====================================
+   BARBER CARDS
+===================================== */
+
+.barber-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.barber-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 20px 10px;
+    background-color: #fff;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.barber-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* BARBER IMAGE SIZE */
+
+.barber-card img {
+    width: 115px;
+    height: 115px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+    display: block;
+    margin: 10px auto;
+    background-color: #f1f1f1;
+}
+
+.barber-card h4 {
+    color: var(--red);
+    font-size: 15px;
+    margin: 8px 0 3px;
+}
+
+.barber-card p {
+    color: var(--gray);
+    font-size: 12px;
+}
+
+/* SELECTED BARBER */
+
+.barber-card:has(input:checked) {
+    border: 2px solid var(--red);
+    background-color: #fff8f8;
+    box-shadow: 0 5px 18px rgba(181, 18, 36, 0.10);
+}
+
+.barber-card input[type="radio"] {
+    accent-color: var(--red);
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+
+/* =====================================
+   SERVICE CHECKBOXES
+===================================== */
+
+.service-selection {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.service-selection label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 13px;
+    background-color: #fafafa;
+    border: 1px solid #eeeeee;
+    border-radius: 6px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.service-selection label:hover {
+    border-color: var(--gold);
+    background-color: var(--light-gold);
+}
+
+.service-selection input {
+    accent-color: var(--red);
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+
+/* =====================================
+   TOTAL PRICE
+===================================== */
+
+.total-price {
+    margin: 30px 0;
+    padding: 22px;
+    text-align: center;
+    background-color: var(--light-gold);
+    border: 1px solid #e6d5b5;
+    border-radius: 8px;
+}
+
+.total-price h3 {
+    color: var(--dark) !important;
+    border: none !important;
+    margin: 0 0 8px !important;
+}
+
+.total-price h2 {
+    color: var(--red);
+    font-size: 30px;
+}
+
+
+/* =====================================
+   MONDAY WARNING
+===================================== */
+
+.monday-warning {
+    margin: 20px 0;
+    padding: 16px;
+    background-color: #fff8ed;
+    color: #795a2c;
+    border-left: 4px solid var(--gold);
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   BOOKING BUTTON
+===================================== */
+
+.booking-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+
+    background-color: var(--red);
+    color: var(--white);
+
+    border: 2px solid var(--red);
+    border-radius: 6px;
+
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.booking-button:hover {
+    background-color: var(--dark-red);
+    border-color: var(--dark-red);
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    padding: 55px 20px;
+    text-align: center;
+    background-color: var(--dark);
+    color: var(--white);
+    border-top: 4px solid var(--gold);
+}
+
+footer h2 {
+    color: var(--gold);
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #dddddd;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+
+    .services {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .barber-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .booking-container {
+        padding: 35px 25px;
+    }
+
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 600px) {
+
+    html {
+        scroll-padding-top: 15px;
+    }
+
+    /* HEADER */
+
+    .header {
+        padding: 12px 12px;
+    }
+
+    .logo img {
+        @media (max-width: 600px) {
+    .logo img {
+        max-width: 480px;
+        height: 210px;
+    }
+}
+    }
+
+    .header > p {
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    nav {
+        gap: 8px 15px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 5px 0;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 370px;
+        padding: 70px 18px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 11px 24px;
+        font-size: 13px;
+    }
+
+
+    /* SERVICES */
+
+    .services {
+        padding: 55px 15px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .services > h2 {
+        font-size: 27px;
+    }
+
+    .services > p {
+        font-size: 13px;
+    }
+
+    .service-box {
+        padding: 17px 9px;
+    }
+
+    .service-box h3 {
+        font-size: 13px;
+    }
+
+    .service-box p {
+        font-size: 12px;
+    }
+
+
+    /* ABOUT */
+
+    .about {
+        padding: 55px 20px;
+    }
+
+    .about h2 {
+        font-size: 27px;
+    }
+
+    .about p {
+        font-size: 14px;
+    }
+
+
+    /* BOOKING */
+
+    .booking-section {
+        padding: 45px 12px;
+    }
+
+    .booking-container {
+        padding: 28px 16px;
+        border-radius: 8px;
+    }
+
+    .booking-container > h2 {
+        font-size: 26px;
+    }
+
+    .booking-description {
+        font-size: 13px;
+    }
+
+    #bookingForm h3 {
+        font-size: 17px;
+    }
+
+
+    /* BARBERS */
+
+    .barber-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .barber-card {
+        padding: 14px 6px;
+    }
+
+    .barber-card img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .barber-card h4 {
+        font-size: 13px;
+    }
+
+    .barber-card p {
+        font-size: 11px;
+    }
+
+
+    /* SERVICES CHECKBOXES */
+
+    .service-selection {
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .service-selection label {
+        font-size: 13px;
+        padding: 12px;
+    }
+
+
+    /* TOTAL */
+
+    .total-price h2 {
+        font-size: 26px;
+    }
+
+
+    /* WARNING */
+
+    .monday-warning {
+        font-size: 12px;
+        padding: 12px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        padding: 40px 15px;
+    }
+
+    footer h2 {
+        font-size: 23px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+}
+
+
+/* SMALL MOBILE */
+@media (max-width: 360px) {
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .barber-card img {
+        width: 78px;
+        height: 78px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+}
+body {
+    font-size: 17px;
+}
+
+.header > p {
+    font-size: 14px;
+}
+
+nav a {
+    font-size: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.services > h2,
+.about h2 {
+    font-size: 37px;
+}
+
+.service-box h3 {
+    font-size: 19px;
+}
+
+.service-box p {
+    font-size: 16px;
+}
+
+.about p {
+    font-size: 18px;
+}
+
+#bookingForm h3 {
+    font-size: 22px;
+}
+
+.barber-card h4 {
+    font-size: 17px;
+}
+
+.barber-card p {
+    font-size: 14px;
+}
+
+.service-selection label {
+    font-size: 15px;
+}
+
+.booking-button {
+    font-size: 17px;
+}
+
+footer p {
+    font-size: 15px;
+}
+
+/* CLICKABLE SERVICE CARDS */
+
+.service-box {
+    cursor: pointer;
+    text-align: center;
+}
+
+.service-box summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.service-box summary::-webkit-details-marker {
+    display: none;
+}
+
+.service-box summary::after {
+    content: "+ View Details";
+    display: block;
+    color: #b51224;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 12px;
+}
+
+.service-box[open] summary::after {
+    content: "- Close Details";
+    color: #161616;
+}
+
+.service-description {
+    color: #444;
+    background: #fff8ed;
+    border-top: 2px solid #c6a15b;
+    padding: 14px 10px;
+    margin-top: 15px;
+    border-radius: 6px;
+    font-size: 15px;
+    line-height: 1.7;
+    
+}
+.service-description {
+    color: black !important;
+}
+.service-description {
+    font-weight: 300;
+}
+
+/* PRODUCTS SECTION */
+
+.products {
+    padding: 70px 8%;
+    text-align: center;
+    background: #ffffff;
+}
+
+.products h2 {
+    color: #b51224;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.products > p {
+    color: #777777;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid #eeeeee;
+    border-bottom: 3px solid #c6a15b;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+    border-bottom-color: #b51224;
+}
+
+.product-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    color: #242424;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    color: #777777;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.product-card h4 {
+    color: #b51224;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 500px) {
+    .products {
+        padding: 45px 5%;
+    }
+
+    .products h2 {
+        font-size: 25px;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .product-card {
+        padding: 10px;
+    }
+
+    .product-card img {
+        height: 130px;
+    }
+
+    .product-card h3 {
+        font-size: 15px;
+    }
+
+    .product-card p {
+        font-size: 12px;
+    }
+}
+
+/* PRODUCT ORDER BUTTON */
+
+.order-btn {
+    display: inline-block;
+    background: #b51224;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    background: #171717;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* .service-description {
+    color: #000000;
+}
+.service-box[open] summary::after {
+    color: #000000;
+} */

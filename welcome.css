@@ -1,0 +1,188 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f6f2;
+    color: #292323;
+}
+
+.welcome-container {
+    min-height: 100vh;
+    padding: 35px 7%;
+    display: flex;
+    flex-direction: column;
+    background:
+        radial-gradient(circle at top right, #f4e6d6 0, transparent 35%),
+        #fffdf9;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 1px solid #e8d9c5;
+    padding-bottom: 22px;
+}
+
+.header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    letter-spacing: 7px;
+    color: #8d1425;
+}
+
+.header h2 span {
+    color: #c49a54;
+}
+
+.header p {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #8a8177;
+    margin-top: 5px;
+}
+
+.welcome-content {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+    text-align: center;
+    padding: 65px 0;
+}
+
+.top-text {
+    color: #a77c3d;
+    letter-spacing: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.welcome-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 7vw, 65px);
+    line-height: 1.15;
+    color: #292323;
+}
+
+.welcome-content h1 span {
+    color: #a51227;
+    font-style: italic;
+}
+
+.description {
+    max-width: 440px;
+    margin: 20px auto 38px;
+    color: #81766d;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.website-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.site-button {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    text-align: left;
+    padding: 20px 24px;
+    background: #fff;
+    border: 1px solid #eadcc8;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #292323;
+    box-shadow: 0 8px 25px rgba(70, 40, 25, 0.05);
+    transition: 0.3s ease;
+}
+
+.site-button > span {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: #bd985e;
+}
+
+.site-button div {
+    flex: 1;
+}
+
+.site-button h3 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #861426;
+}
+
+.site-button p {
+    font-size: 11px;
+    color: #92877d;
+    margin-top: 5px;
+}
+
+.site-button b {
+    font-size: 22px;
+    color: #bd985e;
+}
+
+.site-button:hover {
+    background: #941629;
+    border-color: #941629;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(148, 22, 41, 0.2);
+}
+
+.site-button:hover h3,
+.site-button:hover p,
+.site-button:hover > span,
+.site-button:hover b {
+    color: #fff;
+}
+
+.bottom-text {
+    margin-top: 40px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #a68b68;
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid #e8d9c5;
+    padding-top: 20px;
+    color: #978c80;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+    .welcome-container {
+        padding: 25px 6%;
+    }
+
+    .welcome-content {
+        padding: 55px 0;
+    }
+
+    .site-button {
+        padding: 17px 14px;
+        gap: 12px;
+    }
+
+    .site-button h3 {
+        font-size: 11px;
+    }
+
+    .site-button p {
+        font-size: 10px;
+    }
+
+    .bottom-text {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+}

@@ -1,0 +1,777 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --gold: #C99A32;
+    --light-gold: #F8EBD2;
+    --cream: #FFF9EF;
+    --white: #FFFFFF;
+    --red: #B51224;
+    --dark-red: #850D1B;
+    --dark: #29231D;
+    --gray: #77716A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.7;
+}
+
+/* HEADER */
+
+.header {
+    background: var(--white);
+    text-align: center;
+    padding: 20px 5%;
+    border-top: 5px solid var(--gold);
+    border-bottom: 2px solid var(--light-gold);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+}
+
+.logo {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.header-text {
+    color: var(--gold);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 10px 0 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eee3ce;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--red);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 440px;
+    padding: 90px 7%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(120deg, #F8EBD2, #FFFFFF, #EBD3A6);
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.gold-text {
+    color: var(--gold);
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.hero h1 span,
+h2 span {
+    color: var(--red);
+}
+
+.hero-content > p:not(.gold-text) {
+    color: var(--gray);
+    margin-bottom: 25px;
+}
+
+.btn,
+.detail-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--red);
+    color: var(--white);
+    padding: 11px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover,
+.detail-btn:hover {
+    background: var(--gold);
+    color: var(--dark);
+}
+
+/* SERVICES */
+
+.services {
+    padding: 65px 5%;
+    text-align: center;
+    background: var(--white);
+}
+
+.services h2,
+.rate-section > h2 {
+    font-size: 36px;
+    color: var(--gold);
+}
+
+.section-line {
+    display: inline-block;
+    color: var(--red);
+    border-bottom: 2px solid var(--gold);
+    padding: 5px 25px 12px;
+    margin-bottom: 30px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.service-box {
+    min-width: 0;
+    padding: 25px 18px;
+    background: var(--cream);
+    border: 1px solid #EAD7B2;
+    border-bottom: 4px solid var(--gold);
+    border-radius: 10px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    border-bottom-color: var(--red);
+    box-shadow: 0 8px 20px rgba(198,161,91,0.15);
+}
+
+.service-box h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: var(--dark);
+}
+
+.service-box p {
+    color: var(--gray);
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* SERVICE DETAILS */
+
+.service-box details {
+    margin-top: 12px;
+}
+
+.service-box summary {
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+    background: var(--gold);
+    color: var(--white);
+    padding: 7px 20px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.service-box summary::-webkit-details-marker {
+    display: none;
+}
+
+.service-box summary:hover {
+    background: var(--red);
+}
+
+.service-box summary::after {
+    content: " +";
+}
+
+.service-box details[open] summary::after {
+    content: " −";
+}
+
+.service-description {
+    background: var(--white);
+    border-left: 3px solid var(--gold);
+    border-radius: 6px;
+    padding: 14px;
+    margin-top: 14px;
+    color: var(--gray);
+    font-size: 13px;
+    line-height: 1.7;
+    text-align: left;
+}
+
+.service-description a {
+    display: inline-block;
+    color: var(--red);
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.service-description a:hover {
+    color: var(--gold);
+    text-decoration: underline;
+}
+
+/* RATE LIST */
+
+.rate-section {
+    padding: 60px 5%;
+    text-align: center;
+    background: var(--light-gold);
+}
+
+.rate-section > h2 {
+    color: var(--gold);
+}
+
+.rate-section > .section-line {
+    color: var(--red);
+}
+
+.price-grid {
+    column-count: 3;
+    column-gap: 18px;
+    text-align: left;
+}
+
+.price-card {
+    display: inline-block;
+    width: 100%;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    margin: 0 0 18px;
+    padding: 14px 16px;
+    background: var(--white);
+    border: 1px solid #E8D8BA;
+    border-top: 4px solid var(--gold);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    scroll-margin-top: 15px;
+}
+
+.price-card h3 {
+    color: var(--red);
+    font-size: 16px;
+    line-height: 1.45;
+    margin: 8px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #eee2cc;
+}
+
+.price-card h3:first-child {
+    margin-top: 0;
+}
+
+.price-card p {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12px;
+    line-height: 1.45;
+    padding: 5px 0;
+    margin: 0;
+    border-bottom: 1px solid #f2eee7;
+}
+
+.price-card p span {
+    flex: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.price-card p b {
+    color: var(--red);
+    text-align: right;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-size: 12px;
+}
+
+/* ABOUT */
+
+.about {
+    padding: 65px 8%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+    background: var(--white);
+}
+
+.about > div:first-child {
+    max-width: 650px;
+}
+
+.about h2 {
+    color: var(--gold);
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    color: var(--gray);
+}
+
+.professional {
+    padding: 25px;
+    border-left: 3px solid var(--gold);
+}
+
+.professional h3 {
+    color: var(--gold);
+}
+
+.professional h2 {
+    color: var(--red);
+    font-size: 25px;
+}
+
+/* APPOINTMENT */
+
+.appointment-section {
+    padding: 65px 5%;
+    background: linear-gradient(120deg, #F5E5C7, #FFF9EF);
+}
+
+.appointment-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 35px;
+    align-items: start;
+    background: var(--white);
+    padding: 35px;
+    border-radius: 12px;
+    border-top: 5px solid var(--gold);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+/* ATTA PICTURE - STICKY */
+
+.atta-picture {
+    text-align: center;
+    padding: 15px;
+    background: #FFF9EF;
+    border-radius: 10px;
+    position: sticky;
+    top: 25px;
+    align-self: start;
+    margin: 0;
+}
+
+.atta-picture img {
+    display: block;
+    width: 250px;
+    max-width: 100%;
+    height: 290px;
+    object-fit: cover;
+    object-position: center;
+    margin: auto;
+    border-radius: 10px;
+    border: 4px solid #C99A32;
+}
+
+.atta-picture h3 {
+    color: var(--red);
+    margin-top: 12px;
+}
+
+.atta-picture p {
+    color: var(--gray);
+    font-size: 13px;
+}
+
+/* APPOINTMENT FORM */
+
+.appointment-label {
+    color: var(--gold);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.appointment-form-area h2 {
+    font-size: 34px;
+    margin: 5px 0;
+    color: var(--gold);
+}
+
+.appointment-description {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#appointmentForm label:not(.consent-label) {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 13px 0 6px;
+}
+
+#appointmentForm input:not([type="checkbox"]),
+#appointmentForm select,
+#appointmentForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #E6D8C0;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    background: var(--cream);
+    outline: none;
+}
+
+#appointmentForm input:focus,
+#appointmentForm select:focus,
+#appointmentForm textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201,154,50,0.12);
+}
+
+.consent-label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--gray);
+    font-size: 12px;
+    margin-top: 18px;
+}
+
+.consent-label input {
+    accent-color: var(--gold);
+    margin-top: 5px;
+}
+
+.appointment-button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 22px;
+    background: var(--red);
+    color: var(--white);
+    border: 2px solid var(--red);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.appointment-button:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--dark);
+}
+
+.form-note {
+    font-size: 12px;
+    color: var(--gray);
+    margin-top: 12px;
+}
+
+/* FOOTER */
+
+.footer {
+    padding: 40px 20px;
+    text-align: center;
+    background: var(--white);
+    border-top: 5px solid var(--gold);
+}
+
+.footer-logo img {
+    display: block;
+    width: 230px;
+    max-width: 100%;
+    height: 110px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+}
+
+.footer h3 {
+    color: var(--red);
+    margin-bottom: 8px;
+}
+
+.footer p {
+    color: var(--gray);
+    font-size: 14px;
+    margin: 6px 0;
+}
+
+.copyright {
+    border-top: 1px solid #eee2cc;
+    padding-top: 18px;
+    margin-top: 20px !important;
+}
+
+/* TOTAL PRICE */
+
+.total-price {
+    margin: 16px 0 22px;
+    padding: 16px;
+    text-align: center;
+    border: 1px solid #c5a45d;
+    border-radius: 10px;
+    background: #fffaf0;
+}
+
+.total-price h3 {
+    margin: 0 0 6px;
+    color: #8c6b2d;
+}
+
+.total-price h2 {
+    margin: 0;
+    color: #a47b2c;
+    font-size: 28px;
+}
+
+.total-price p {
+    margin: 8px 0 0;
+    font-size: 12px;
+    color: var(--gray);
+}
+
+/* MULTIPLE SERVICE SELECTION */
+
+.service-options {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+    margin: 10px 0 18px;
+}
+
+.service-options h3 {
+    grid-column: 1 / -1;
+    margin: 14px 0 2px;
+    padding-bottom: 6px;
+    color: #b08a3c;
+    border-bottom: 1px solid rgba(176, 138, 60, 0.35);
+    font-size: 15px;
+}
+
+.service-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    padding: 10px 12px;
+    border: 1px solid #e3d5b5;
+    border-radius: 8px;
+    background: #fffdf8;
+    color: #333;
+    font-size: 13px;
+    line-height: 1.45;
+    cursor: pointer;
+}
+
+.service-option input {
+    width: auto;
+    min-width: 16px;
+    margin: 2px 0 0;
+    accent-color: #b08a3c;
+}
+
+.service-option:has(input:checked) {
+    border-color: #b08a3c;
+    background: #fbf4e5;
+}
+
+/* PDO QUANTITY */
+
+.pdo-quantity {
+    margin: 10px 0;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .price-grid {
+        column-count: 2;
+    }
+
+    .appointment-container {
+        grid-template-columns: 220px minmax(0, 1fr);
+        padding: 25px;
+    }
+
+    .atta-picture img {
+        width: 200px;
+        height: 250px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 18px 12px;
+    }
+
+    .logo {
+        width: 280px;
+        max-width: 100%;
+        height: 135px;
+    }
+
+    .header-text {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        gap: 10px 17px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .services,
+    .rate-section {
+        padding: 45px 14px;
+    }
+
+    .services h2,
+    .rate-section > h2 {
+        font-size: 27px;
+    }
+
+    .section-line {
+        padding-left: 8px;
+        padding-right: 8px;
+        font-size: 13px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .price-grid {
+        column-count: 1;
+    }
+
+    .service-box {
+        padding: 20px 14px;
+    }
+
+    .price-card {
+        padding: 15px;
+    }
+
+    .price-card p {
+        font-size: 12px;
+        gap: 8px;
+    }
+
+    .price-card p b {
+        font-size: 11px;
+    }
+
+    .about {
+        padding: 45px 18px;
+    }
+
+    .professional {
+        border-left: none;
+        border-top: 3px solid var(--gold);
+    }
+
+    .appointment-section {
+        padding: 40px 12px;
+    }
+
+    .appointment-container {
+        grid-template-columns: 1fr;
+        padding: 22px 15px;
+    }
+
+    .atta-picture {
+        position: static;
+    }
+
+    .atta-picture img {
+        width: 210px;
+        height: 250px;
+    }
+
+    .appointment-form-area h2 {
+        font-size: 27px;
+    }
+
+    .service-options {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-logo img {
+        width: 190px;
+        height: 90px;
+    }
+}

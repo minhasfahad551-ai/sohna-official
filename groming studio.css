@@ -1,0 +1,1293 @@
+/* =====================================
+   SOHNA GROOMING STUDIO
+   WHITE + RED + GOLD
+===================================== */
+
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+
+/* ROOT COLORS */
+:root {
+    --red: #b51224;
+    --dark-red: #850d1b;
+    --gold: #c6a15b;
+    --light-gold: #f8f1e5;
+    --white: #ffffff;
+    --light: #f8f8f8;
+    --dark: #242424;
+    --gray: #777777;
+}
+
+
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--white);
+    color: #292929;
+    line-height: 1.7;
+    font-size: 17px;
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+/* HEADER */
+.header {
+    width: 100%;
+    background-color: var(--white);
+    text-align: center;
+    padding: 25px 6%;
+    border-top: 5px solid var(--red);
+    border-bottom: 1px solid #eeeeee;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.header .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    gap: 8px;
+}
+
+.header .logo h1 {
+    display: block;
+    width: 100%;
+    color: var(--red);
+    font-size: clamp(25px, 4vw, 42px);
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.header .logo .tagline {
+    display: block;
+    width: 100%;
+    color: var(--gold);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.header > p {
+    color: var(--red);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin: 5px 0 18px;
+}
+
+.header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px 35px;
+}
+
+.header nav a {
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 0;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+    min-height: 480px;
+    padding: 100px 20px;
+
+    background:
+        linear-gradient(
+            rgba(25, 25, 25, 0.82),
+            rgba(25, 25, 25, 0.82)
+        ),
+        linear-gradient(
+            135deg,
+            #252525,
+            #252525,
+            #080808
+        );
+
+    color: var(--white);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h2 {
+    font-size: clamp(32px, 5vw, 55px);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 18px;
+    font-family: sans-serif;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #eeeeee;
+    margin-bottom: 30px;
+}
+
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 13px 32px;
+    background-color: var(--red);
+    color: var(--white);
+    text-decoration: none;
+    border: 2px solid var(--red);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--dark);
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   SERVICES
+===================================== */
+
+.services {
+    padding: 75px 7%;
+    background-color: var(--light);
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.services > h2,
+.services > p {
+    grid-column: 1 / -1;
+}
+
+.services > h2 {
+    font-size: 37px;
+    color: var(--red);
+    margin-bottom: -15px;
+}
+
+.services > p {
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.service-box {
+    background-color: var(--white);
+    padding: 25px 18px;
+    border-radius: 8px;
+    border-bottom: 3px solid var(--gold);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.service-box:hover {
+    transform: translateY(-6px);
+    border-bottom-color: var(--red);
+    box-shadow: 0 10px 25px rgba(181, 18, 36, 0.10);
+}
+
+.service-box h3 {
+    color: var(--dark);
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.service-box p {
+    color: var(--red);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/* CLICKABLE SERVICE CARDS */
+.service-box summary {
+    list-style: none;
+    cursor: pointer;
+}
+
+.service-box summary::-webkit-details-marker {
+    display: none;
+}
+
+.service-box summary::after {
+    content: "+ View Details";
+    display: block;
+    color: var(--red);
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 12px;
+}
+
+.service-box[open] summary::after {
+    content: "- Close Details";
+    color: #161616;
+}
+
+.service-description {
+    color: #000000 !important;
+    background: #fff8ed;
+    border-top: 2px solid var(--gold);
+    padding: 14px 10px;
+    margin-top: 15px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+
+/* =====================================
+   ABOUT
+===================================== */
+
+.about {
+    padding: 80px 10%;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.about h2 {
+    font-size: 37px;
+    color: var(--red);
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    color: var(--gray);
+    font-size: 18px;
+}
+
+
+/* =====================================
+   BOOKING SECTION
+===================================== */
+
+.booking-section {
+    padding: 75px 20px;
+    background-color: #faf7f4;
+}
+
+.booking-container {
+    max-width: 900px;
+    margin: auto;
+    background-color: var(--white);
+    padding: 45px;
+    border-radius: 12px;
+    border-top: 5px solid var(--red);
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.08);
+}
+
+.booking-subtitle {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+.booking-container > h2 {
+    color: var(--red);
+    font-size: 34px;
+    text-align: center;
+    margin: 8px 0;
+}
+
+.booking-description {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 35px;
+}
+
+
+/* FORM HEADINGS */
+#bookingForm h3 {
+    color: var(--dark);
+    font-size: 22px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+#bookingForm > p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+#bookingForm label:not(.barber-card):not(.service-selection label) {
+    display: block;
+    color: var(--dark);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 15px 0 7px;
+}
+
+
+/* INPUTS AND SELECT */
+#bookingForm input[type="text"],
+#bookingForm input[type="tel"],
+#bookingForm input[type="date"],
+#bookingForm select {
+    width: 100%;
+    padding: 13px 15px;
+    border: 1px solid #dddddd;
+    border-radius: 6px;
+    background-color: var(--white);
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+#bookingForm input:focus,
+#bookingForm select:focus {
+    border-color: var(--red);
+    box-shadow: 0 0 0 3px rgba(181, 18, 36, 0.08);
+}
+
+
+/* =====================================
+   STYLIST CARDS
+===================================== */
+
+.barber-container {
+    display: grid;
+    grid-template-columns: minmax(0, 280px);
+    justify-content: center;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.barber-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 20px 10px;
+    background-color: var(--white);
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.barber-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.barber-card img {
+    width: 115px;
+    height: 115px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 3px solid var(--gold);
+    display: block;
+    margin: 10px auto;
+    background-color: #f1f1f1;
+}
+
+.barber-card h4 {
+    color: var(--red);
+    font-size: 17px;
+    margin: 8px 0 3px;
+}
+
+.barber-card p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.barber-card:has(input:checked) {
+    border: 2px solid var(--red);
+    background-color: #fff8f8;
+    box-shadow: 0 5px 18px rgba(181, 18, 36, 0.10);
+}
+
+.barber-card input[type="radio"] {
+    accent-color: var(--red);
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+
+/* =====================================
+   SERVICE CHECKBOXES
+===================================== */
+
+.service-selection {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.service-selection label {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 13px;
+    background-color: #fafafa;
+    border: 1px solid #eeeeee;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.service-selection label:hover {
+    border-color: var(--gold);
+    background-color: var(--light-gold);
+}
+
+.service-selection input {
+    accent-color: var(--red);
+    width: 17px;
+    height: 17px;
+    flex-shrink: 0;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+
+/* =====================================
+   TOTAL PRICE
+===================================== */
+
+.total-price {
+    margin: 30px 0;
+    padding: 22px;
+    text-align: center;
+    background-color: var(--light-gold);
+    border: 1px solid #e6d5b5;
+    border-radius: 8px;
+}
+
+.total-price h3 {
+    color: var(--dark) !important;
+    border: none !important;
+    margin: 0 0 8px !important;
+}
+
+.total-price h2 {
+    color: var(--red);
+    font-size: 30px;
+}
+
+
+/* =====================================
+   MONDAY WARNING
+===================================== */
+
+.monday-warning {
+    margin: 20px 0;
+    padding: 16px;
+    background-color: #fff8ed;
+    color: #795a2c;
+    border-left: 4px solid var(--gold);
+    border-radius: 5px;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   BOOKING BUTTON
+===================================== */
+
+.booking-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 30px;
+
+    background-color: var(--red);
+    color: var(--white);
+
+    border: 2px solid var(--red);
+    border-radius: 6px;
+
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.booking-button:hover {
+    background-color: var(--dark-red);
+    border-color: var(--dark-red);
+    transform: translateY(-2px);
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    padding: 55px 20px;
+    text-align: center;
+    background-color: var(--dark);
+    color: var(--white);
+    border-top: 4px solid var(--gold);
+}
+
+footer h2 {
+    color: var(--gold);
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #dddddd;
+    font-size: 15px;
+    margin: 8px 0;
+}
+
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 900px) {
+
+    .services {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .booking-container {
+        padding: 35px 25px;
+    }
+
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 600px) {
+
+    html {
+        scroll-padding-top: 15px;
+    }
+
+    .header {
+        padding: 12px;
+    }
+
+    .logo h1 {
+        font-size: 26px;
+        letter-spacing: 1px;
+    }
+
+    .logo p {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .header > p {
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-bottom: 15px;
+    }
+
+    nav {
+        gap: 8px 15px;
+    }
+
+    nav a {
+        font-size: 12px;
+        padding: 5px 0;
+    }
+
+
+    /* HERO */
+    .hero {
+        min-height: 370px;
+        padding: 70px 18px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 11px 24px;
+        font-size: 13px;
+    }
+
+
+    /* SERVICES */
+    .services {
+        padding: 55px 15px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .services > h2 {
+        font-size: 27px;
+    }
+
+    .services > p {
+        font-size: 13px;
+    }
+
+    .service-box {
+        padding: 17px 9px;
+    }
+
+    .service-box h3 {
+        font-size: 13px;
+    }
+
+    .service-box p {
+        font-size: 12px;
+    }
+
+
+    /* ABOUT */
+    .about {
+        padding: 55px 20px;
+    }
+
+    .about h2 {
+        font-size: 27px;
+    }
+
+    .about p {
+        font-size: 14px;
+    }
+
+
+    /* BOOKING */
+    .booking-section {
+        padding: 45px 12px;
+    }
+
+    .booking-container {
+        padding: 28px 16px;
+        border-radius: 8px;
+    }
+
+    .booking-container > h2 {
+        font-size: 26px;
+    }
+
+    .booking-description {
+        font-size: 13px;
+    }
+
+    #bookingForm h3 {
+        font-size: 17px;
+    }
+
+
+    /* STYLIST */
+    .barber-container {
+        grid-template-columns: minmax(0, 280px);
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .barber-card {
+        padding: 14px 6px;
+    }
+
+    .barber-card img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .barber-card h4 {
+        font-size: 13px;
+    }
+
+    .barber-card p {
+        font-size: 11px;
+    }
+
+
+    /* SERVICE CHECKBOXES */
+    .service-selection {
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .service-selection label {
+        font-size: 13px;
+        padding: 12px;
+    }
+
+
+    /* TOTAL */
+    .total-price h2 {
+        font-size: 26px;
+    }
+
+
+    /* WARNING */
+    .monday-warning {
+        font-size: 12px;
+        padding: 12px;
+    }
+
+
+    /* FOOTER */
+    footer {
+        padding: 40px 15px;
+    }
+
+    footer h2 {
+        font-size: 23px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 360px) {
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .barber-card img {
+        width: 78px;
+        height: 78px;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+}
+/* HEADER SPACING */
+.header {
+    padding: 25px 6%;
+}
+
+.logo {
+    margin-bottom: 18px;
+    gap: 8px;
+}
+
+.logo h1 {
+    margin-bottom: 5px;
+}
+
+.logo p {
+    margin-top: 5px;
+    line-height: 1.5;
+}
+
+.header > p {
+    margin: 15px 0 25px;
+}
+
+nav {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eeeeee;
+    gap: 20px 40px;
+}
+.logo {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+    gap: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+.logo .tagline {
+    display: block !important;
+    margin: 0 !important;
+    font-size: 20px !important;
+    color: #c9a64b !important;
+}
+/* FIX LOGO TITLE AND TAGLINE */
+
+.header .logo {
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.header .logo h1 {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto 12px !important;
+}
+
+.header .logo .tagline {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 auto 20px !important;
+    text-align: center !important;
+    font-size: 20px !important;
+    color: #c9a64b !important;
+}
+
+/* BOOKING SECTION */
+
+.booking-section {
+    padding: 65px 5%;
+    background: linear-gradient(120deg, #F5E5C7, #FFF9EF);
+}
+
+.booking-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 35px;
+    align-items: start;
+    background: #fff;
+    padding: 35px;
+    border-radius: 12px;
+    border-top: 5px solid #C99A32;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+/* PROFESSIONAL PICTURE */
+
+.professional-picture {
+    text-align: center;
+    padding: 15px;
+    background: #FFF9EF;
+    border-radius: 10px;
+    position: sticky;
+    top: 20px;
+}
+
+.professional-picture img {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: 290px;
+    object-fit: cover;
+    object-position: center;
+    margin: auto;
+    border-radius: 10px;
+    border: 4px solid #C99A32;
+}
+
+.professional-picture h3 {
+    color: #B51224;
+    margin-top: 15px;
+}
+
+.professional-picture p {
+    color: #77716A;
+    font-size: 13px;
+}
+
+.professional-tagline {
+    color: #C99A32 !important;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+/* BOOKING FORM */
+
+.booking-form-area {
+    min-width: 0;
+}
+
+.booking-subtitle {
+    color: #C99A32;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.booking-form-area h2 {
+    font-size: 34px;
+    color: #C99A32;
+    margin: 5px 0;
+}
+
+.booking-description {
+    color: #77716A;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#bookingForm h3 {
+    color: #B51224;
+    margin: 22px 0 10px;
+    font-size: 19px;
+}
+
+#bookingForm > label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 13px 0 6px;
+}
+
+#bookingForm input[type="text"],
+#bookingForm input[type="tel"],
+#bookingForm input[type="date"],
+#bookingForm select,
+#bookingForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #E6D8C0;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    background: #FFF9EF;
+    outline: none;
+}
+
+#bookingForm input:focus,
+#bookingForm select:focus,
+#bookingForm textarea:focus {
+    border-color: #C99A32;
+    box-shadow: 0 0 0 3px rgba(201,154,50,0.12);
+}
+
+/* SERVICE SELECTION */
+
+.service-selection {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.service-selection label {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    padding: 11px;
+    background: #FFF9EF;
+    border: 1px solid #EAD7B2;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.service-selection label:hover {
+    border-color: #C99A32;
+    background: #F8EBD2;
+}
+
+.service-selection input {
+    accent-color: #B51224;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+/* TOTAL PRICE */
+
+.total-price {
+    padding: 18px;
+    margin: 20px 0;
+    background: #F8EBD2;
+    border-left: 4px solid #C99A32;
+    border-radius: 6px;
+}
+
+.total-price h3 {
+    margin: 0 !important;
+    color: #29231D !important;
+}
+
+.total-price h2 {
+    color: #B51224;
+    font-size: 28px;
+    margin: 5px 0;
+}
+
+.total-price p {
+    font-size: 12px;
+    color: #77716A;
+}
+
+/* MONDAY NOTICE */
+
+.monday-warning {
+    margin-top: 18px;
+    padding: 15px;
+    background: #FFF4E5;
+    border-left: 4px solid #C99A32;
+    border-radius: 5px;
+    color: #66502D;
+    font-size: 13px;
+}
+
+.opening-hours {
+    margin-top: 15px;
+    color: #77716A;
+    font-size: 13px;
+}
+
+/* BOOKING BUTTON */
+
+.booking-button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background: #B51224;
+    color: #fff;
+    border: 2px solid #B51224;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.booking-button:hover {
+    background: #C99A32;
+    border-color: #C99A32;
+    color: #29231D;
+}
+
+.form-note {
+    font-size: 12px;
+    color: #77716A;
+    margin-top: 12px;
+    text-align: center;
+}
+
+/* SOHNA GROOMING STUDIO - WHITE RED GOLD */
+
+:root {
+    --red: #941629;
+    --dark-red: #690D1B;
+    --gold: #C6A15B;
+    --light-gold: #F8F1E5;
+    --white: #FFFFFF;
+    --light: #FAF8F5;
+    --dark: #292323;
+    --gray: #777777;
+}
+
+.header {
+    background: #FFFFFF;
+    border-top: 5px solid #C6A15B;
+}
+
+.header .logo h1,
+.header > p {
+    color: #941629;
+}
+
+.header .logo .tagline {
+    color: #C6A15B !important;
+}
+
+.hero {
+    background:
+        linear-gradient(rgba(55, 15, 20, 0.82), rgba(55, 15, 20, 0.82)),
+        linear-gradient(135deg, #941629, #3B1018);
+}
+
+.services {
+    background: #FAF8F5;
+}
+
+.services > h2,
+.about h2 {
+    color: #941629;
+}
+
+.service-box {
+    border-bottom: 3px solid #C6A15B;
+}
+
+.service-box:hover {
+    border-bottom-color: #941629;
+}
+
+.booking-section {
+    background: #FFF9EF;
+}
+
+.booking-container {
+    border-top: 5px solid #C6A15B;
+}
+
+.booking-container > h2,
+.booking-form-area h2 {
+    color: #941629;
+}
+
+.professional-picture {
+    background: #FFF9EF;
+}
+
+.professional-picture img,
+.barber-card img {
+    border-color: #C6A15B;
+}
+
+.professional-picture h3,
+.barber-card h4 {
+    color: #941629;
+}
+
+.service-selection label {
+    background: #FFFDF9;
+    border-color: #EADCC5;
+}
+
+.service-selection label:hover {
+    background: #F8F1E5;
+    border-color: #C6A15B;
+}
+
+.total-price {
+    background: #F8F1E5;
+    border-color: #C6A15B;
+}
+
+.total-price h2 {
+    color: #941629;
+}
+
+.booking-button,
+.btn {
+    background: #941629;
+    border-color: #941629;
+    color: #FFFFFF;
+}
+
+.booking-button:hover,
+.btn:hover {
+    background: #C6A15B;
+    border-color: #C6A15B;
+    color: #292323;
+}
+
+footer {
+    background: #292323;
+    border-top: 4px solid #C6A15B;
+}
+
+footer h2 {
+    color: #C6A15B;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+    .booking-container {
+        grid-template-columns: 220px minmax(0, 1fr);
+        padding: 25px;
+    }
+
+    .professional-picture img {
+        height: 250px;
+    }
+
+    .service-selection {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .booking-section {
+        padding: 40px 12px;
+    }
+
+    .booking-container {
+        grid-template-columns: 1fr;
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .professional-picture {
+        position: static;
+    }
+
+    .professional-picture img {
+        width: 210px;
+        height: 250px;
+    }
+
+    .booking-form-area h2 {
+        font-size: 27px;
+    }
+
+    .service-selection {
+        grid-template-columns: 1fr;
+    }
+
+}
