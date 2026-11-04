@@ -1239,6 +1239,50 @@ footer h2 {
     color: #C6A15B;
 }
 
+/* BARBER SELECTION */
+
+.professional-picture {
+    text-align: center;
+}
+
+.barber-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border: 2px solid #d6b45c;
+    border-radius: 15px;
+    cursor: pointer;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.barber-card:has(input:checked) {
+    border-color: #a30f25;
+    background: #fff5f5;
+}
+
+.barber-card input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #a30f25;
+    cursor: pointer;
+    margin-bottom: 12px;
+}
+
+.barber-card img {
+    width: 100%;
+    max-width: 280px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.barber-card h3 {
+    color: #a30f25;
+    margin: 15px 0 5px;
+}
+
 
 /* TABLET */
 
